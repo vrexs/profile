@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stretched Video Background</title>
+    <title>Video Background with Audio</title>
     <style>
         body, html {
             margin: 0;
@@ -13,13 +13,14 @@
             overflow: hidden;
         }
 
-        /* Full-page stretched video background */
+        /* Full-page video background */
         .video-background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            object-fit: cover;
             z-index: -1; /* Puts the video behind other elements */
         }
 
@@ -47,11 +48,17 @@
     </style>
 </head>
 <body>
-    <!-- Stretched video background -->
+    <!-- Video background -->
     <video class="video-background" autoplay loop muted>
         <source src="1.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+
+    <!-- Background audio -->
+    <audio autoplay loop>
+        <source src="3.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
 
     <!-- Centered box with text -->
     <div class="center-box">
